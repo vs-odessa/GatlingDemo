@@ -41,7 +41,8 @@ class BasicSimulation extends Simulation {
 
   val scn = scenario("Scenario Name")   // A scenario is a chain of requests and pauses
 //    .repeat(repeatsNumber)
-    .during(duration minutes)
+//    .during(duration minutes)
+	.during(duration seconds)
 	{  
     exec(http("request_1")
       .get("/"))
