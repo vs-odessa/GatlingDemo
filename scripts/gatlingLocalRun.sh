@@ -26,7 +26,7 @@ chmod +x $GATLING_HOME/bin/*
 
 #No need to change this
 GATLING_REPORT_DIR=$GATLING_HOME/results/
-GATHER_REPORTS_DIR=/root/gatling-reports/
+GATHER_REPORTS_DIR=$GATLING_HOME/gatling-reports/
 
 echo "Starting Gatling cluster run for simulation: $SIMULATION_NAME"
 
@@ -46,10 +46,10 @@ ls -t $GATLING_REPORT_DIR | head -n 1 | xargs -I {} mv ${GATLING_REPORT_DIR}{} $
 cp ${GATLING_REPORT_DIR}report/simulation.log $GATHER_REPORTS_DIR
 
 
-#mv $GATHER_REPORTS_DIR $GATLING_REPORT_DIR
+mv $GATHER_REPORTS_DIR $GATLING_REPORT_DIR
 echo "Generate report for local run..."
-#$GATLING_RUNNER -ro gatling-reports 
-$GATLING_RUNNER -ro report
+$GATLING_RUNNER -ro gatling-reports 
+#$GATLING_RUNNER -ro report
 
 #using macOSX
 #open ${GATLING_REPORT_DIR}reports/index.html
