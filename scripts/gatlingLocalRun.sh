@@ -27,7 +27,7 @@ rm -rf $GATLING_REPORT_DIR
 echo "Running simulation on localhost..."
 $GATLING_RUNNER -nr -s $SIMULATION_NAME
 
-sleep 5
+sleep 10
 
 echo "Gathering result file from localhost..."
 ls -t $GATLING_REPORT_DIR | head -n 1 | xargs -I {} mv ${GATLING_REPORT_DIR}{} ${GATLING_REPORT_DIR}report
