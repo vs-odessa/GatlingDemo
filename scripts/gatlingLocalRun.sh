@@ -48,7 +48,7 @@ cp ${GATLING_REPORT_DIR}report/simulation.log $GATHER_REPORTS_DIR
 
 mv $GATHER_REPORTS_DIR $GATLING_REPORT_DIR
 echo "Generate report for local run..."
-$GATLING_RUNNER -ro gatling-reports 
+$GATLING_RUNNER -ro mygatling-reports 
 #$GATLING_RUNNER -ro report
 
 #using macOSX
