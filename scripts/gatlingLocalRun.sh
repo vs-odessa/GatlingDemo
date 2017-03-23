@@ -26,7 +26,7 @@ chmod +x $GATLING_HOME/bin/*
 
 #No need to change this
 GATLING_REPORT_DIR=$GATLING_HOME/results/
-GATHER_REPORTS_DIR=$GATLING_HOME/gatling-reports/
+GATHER_REPORTS_DIR=$GATLING_HOME/mygatling-reports/
 
 echo "Starting Gatling cluster run for simulation: $SIMULATION_NAME"
 
